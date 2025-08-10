@@ -1,0 +1,104 @@
+Access to XMLHttpRequest at 'https://firebasestorage.googleapis.com/v0/b/connecthub-5b9c7.firebasestorage.app/o?name=files%2Fpartner1_1754752823608_z1m2hy5o.jpg' from origin 'https://fa26a488-f39a-49ae-b26b-397e44b213c9-00-2k35gy61idsxf.sisko.replit.dev' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: It does not have HTTP ok status.Understand this error
+contentInt.js:1  POST https://firebasestorage.googleapis.com/v0/b/connecthub-5b9c7.firebasestorage.app/o?name=files%2Fpartner1_1754752823608_z1m2hy5o.jpg net::ERR_FAILED
+n.send @ contentInt.js:1
+send @ connection.ts:88
+doTheRequest @ request.ts:114
+(anonymous) @ backoff.ts:78
+setTimeout
+callWithDelay @ backoff.ts:74
+start @ backoff.ts:139
+start_ @ request.ts:189
+(anonymous) @ request.ts:90
+NetworkRequest @ request.ts:78
+makeRequest @ request.ts:278
+_makeRequest @ service.ts:316
+makeRequestWithTokens @ service.ts:344
+await in makeRequestWithTokens
+uploadBytes$1 @ reference.ts:268
+uploadBytes @ api.ts:139
+(anonymous) @ script.js:277
+uploadFile @ script.js:230
+sendMessage @ script.js:915Understand this error
+fa26a488-f39a-49ae-b26b-397e44b213c9-00-2k35gy61idsxf.sisko.replit.dev/:1 Access to XMLHttpRequest at 'https://firebasestorage.googleapis.com/v0/b/connecthub-5b9c7.firebasestorage.app/o?name=files%2Fpartner1_1754752823608_z1m2hy5o.jpg' from origin 'https://fa26a488-f39a-49ae-b26b-397e44b213c9-00-2k35gy61idsxf.sisko.replit.dev' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: It does not have HTTP ok status.Understand this error
+contentInt.js:1  POST https://firebasestorage.googleapis.com/v0/b/connecthub-5b9c7.firebasestorage.app/o?name=files%2Fpartner1_1754752823608_z1m2hy5o.jpg net::ERR_FAILED
+n.send @ contentInt.js:1
+send @ connection.ts:88
+doTheRequest @ request.ts:114
+(anonymous) @ backoff.ts:78
+setTimeout
+callWithDelay @ backoff.ts:74
+responseHandler @ backoff.ts:116
+(anonymous) @ request.ts:134
+Promise.then
+doTheRequest @ request.ts:117
+(anonymous) @ backoff.ts:78
+setTimeout
+callWithDelay @ backoff.ts:74
+start @ backoff.ts:139
+start_ @ request.ts:189
+(anonymous) @ request.ts:90
+NetworkRequest @ request.ts:78
+makeRequest @ request.ts:278
+_makeRequest @ service.ts:316
+makeRequestWithTokens @ service.ts:344
+await in makeRequestWithTokens
+uploadBytes$1 @ reference.ts:268
+uploadBytes @ api.ts:139
+(anonymous) @ script.js:277
+uploadFile @ script.js:230
+sendMessage @ script.js:915Understand this error
+fa26a488-f39a-49ae-b26b-397e44b213c9-00-2k35gy61idsxf.sisko.replit.dev/:1 Access to XMLHttpRequest at 'https://firebasestorage.googleapis.com/v0/b/connecthub-5b9c7.firebasestorage.app/o?name=files%2Fpartner1_1754752823608_z1m2hy5o.jpg' from origin 'https://fa26a488-f39a-49ae-b26b-397e44b213c9-00-2k35gy61idsxf.sisko.replit.dev' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: It does not have HTTP ok status.Understand this error
+contentInt.js:1  POST https://firebasestorage.googleapis.com/v0/b/connecthub-5b9c7.firebasestorage.app/o?name=files%2Fpartner1_1754752823608_z1m2hy5o.jpg net::ERR_FAILED
+n.send @ contentInt.js:1
+send @ connection.ts:88
+doTheRequest @ request.ts:114
+(anonymous) @ backoff.ts:78
+setTimeout
+callWithDelay @ backoff.ts:74
+responseHandler @ backoff.ts:116
+(anonymous) @ request.ts:134
+Promise.then
+doTheRequest @ request.ts:117
+(anonymous) @ backoff.ts:78
+setTimeout
+callWithDelay @ backoff.ts:74
+responseHandler @ backoff.ts:116
+(anonymous) @ request.ts:134
+Promise.then
+doTheRequest @ request.ts:117
+(anonymous) @ backoff.ts:78
+setTimeout
+callWithDelay @ backoff.ts:74
+start @ backoff.ts:139
+start_ @ request.ts:189
+(anonymous) @ request.ts:90
+NetworkRequest @ request.ts:78
+makeRequest @ request.ts:278
+_makeRequest @ service.ts:316
+makeRequestWithTokens @ service.ts:344
+await in makeRequestWithTokens
+uploadBytes$1 @ reference.ts:268
+uploadBytes @ api.ts:139
+(anonymous) @ script.js:277
+uploadFile @ script.js:230
+sendMessage @ script.js:915Understand this error
+fa26a488-f39a-49ae-b26b-397e44b213c9-00-2k35gy61idsxf.sisko.replit.dev/:1 Access to XMLHttpRequest at 'https://firebasestorage.googleapis.com/v0/b/connecthub-5b9c7.firebasestorage.app/o?name=files%2Fpartner1_1754752823608_z1m2hy5o.jpg' from origin 'https://fa26a488-f39a-49ae-b26b-397e44b213c9-00-2k35gy61idsxf.sisko.replit.dev' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: It does not have HTTP ok status.Understand this error
+contentInt.js:1  POST https://firebasestorage.googleapis.com/v0/b/connecthub-5b9c7.firebasestorage.app/o?name=files%2Fpartner1_1754752823608_z1m2hy5o.jpg net::ERR_FAILED
+n.send @ contentInt.js:1
+send @ connection.ts:88
+doTheRequest @ request.ts:114
+(anonymous) @ backoff.ts:78
+setTimeout
+callWithDelay @ backoff.ts:74
+responseHandler @ backoff.ts:116
+(anonymous) @ request.ts:134
+Promise.then
+doTheRequest @ request.ts:117
+(anonymous) @ backoff.ts:78
+setTimeout
+callWithDelay @ backoff.ts:74
+responseHandler @ backoff.ts:116
+(anonymous) @ request.ts:134
+Promise.then
+doTheRequest @ request.ts:117
+(anonymous) @ backoff.ts:78Understand this error

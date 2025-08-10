@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>NexusChat - Secure Communication Hub</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap"
+            rel="stylesheet"
+        />
+        <link href="style.css" rel="stylesheet" type="text/css" />
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+            rel="stylesheet"
+        />
+        <link
+            href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/regular/style.css"
+            rel="stylesheet"
+        />
+        <link
+            href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/duotone/style.css"
+            rel="stylesheet"
+        />
+        <script
+            type="module"
+            src="https://unpkg.com/@splinetool/viewer@1.10.40/build/spline-viewer.js"
+        ></script>
+    </head>
+    <body>
+        <div id="app">
+            <!-- Login Screen -->
+            <div id="loginScreen" class="screen active">
+                <div class="spline-loading" id="splineLoading">
+                    <div class="loading-content">
+                        <i class="ph-duotone ph-cube loading-spinner"></i>
+                        <div class="loading-title">Loading Experience...</div>
+                    </div>
+                </div>
+                <spline-viewer
+                    url="https://prod.spline.design/VknFRqU8Fgpz47JW/scene.splinecode"
+                    class="spline-background"
+                    id="splineViewer"
+                ></spline-viewer>
+                <spline-viewer
+                    url="https://prod.spline.design/mb8e6VCSaOzFaWJV/scene.splinecode"
+                    class="spline-background spline-dark"
+                    id="splineViewerDark"
+                    style="display: none"
+                ></spline-viewer>
+                <div class="login-container">
+                    <div class="login-card">
+                        <div class="logo">
+                            <div class="logo-icon">
+                                <i class="ph ph-fingerprint"></i>
+                            </div>
+                            <p class="tagline">NEXBOT<br />Authentication</p>
+                        </div>
+
+                        <div class="theme-toggle-container">
+                            <button
+                                id="themeToggle"
+                                class="theme-toggle-btn"
+                                title="Toggle Theme"
+                            >
+                                <i class="fas fa-moon"></i>
+                            </button>
+                        </div>
+
+                        <div class="login-options">
+                            <p class="options-title">
+                                Select Your Access Level
+                            </p>
+                            <div class="login-cards">
+                                <div
+                                    class="login-card-option"
+                                    data-role="admin"
+                                    data-role-name="Admin Access"
+                                >
+                                    <div class="card-icon admin-icon">
+                                        <i class="fas fa-crown"></i>
+                                    </div>
+                                    <div class="card-content">
+                                        <h4>Admin Access</h4>
+                                        <p>
+                                            Full system administration
+                                            privileges
+                                        </p>
+                                    </div>
+                                    <div class="card-arrow">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="login-card-option"
+                                    data-role="moderator"
+                                    data-role-name="Moderator Access"
+                                >
+                                    <div class="card-icon moderator-icon">
+                                        <i class="fas fa-shield-alt"></i>
+                                    </div>
+                                    <div class="card-content">
+                                        <h4>Moderator Access</h4>
+                                        <p>
+                                            Content moderation and user
+                                            management
+                                        </p>
+                                    </div>
+                                    <div class="card-arrow">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="login-card-option"
+                                    data-role="member"
+                                    data-role-name="Partner Access"
+                                >
+                                    <div class="card-icon partner-icon">
+                                        <i class="fas fa-handshake"></i>
+                                    </div>
+                                    <div class="card-content">
+                                        <h4>Partner Access</h4>
+                                        <p>
+                                            Limited access for business partners
+                                        </p>
+                                    </div>
+                                    <div class="card-arrow">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Chat Interface -->
+            <div id="chatScreen" class="screen">
+                <div class="chat-container">
+                    <!-- Sidebar -->
+                    <div class="sidebar">
+                        <div class="sidebar-header">
+                            <div class="user-profile">
+                                <div class="avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="user-info">
+                                    <span
+                                        class="username"
+                                        id="currentUser"
+                                    ></span>
+                                    <span class="role" id="currentRole"></span>
+                                </div>
+                            </div>
+                            <div class="sidebar-actions">
+                                <button
+                                    id="downloadBtn"
+                                    class="action-btn"
+                                    title="Download Data"
+                                >
+                                    <i class="fas fa-download"></i>
+                                </button>
+                                <button
+                                    id="deleteBtn"
+                                    class="action-btn delete-btn"
+                                    title="Delete Data"
+                                    style="display: none"
+                                >
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                                <button
+                                    id="logoutBtn"
+                                    class="action-btn"
+                                    title="Logout"
+                                >
+                                    <i class="fas fa-sign-out-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="contacts-section">
+                            <div class="section-header">
+                                <h3>Contacts</h3>
+                                <button
+                                    id="newChatBtn"
+                                    class="new-chat-btn"
+                                    title="New Chat"
+                                >
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                            <div id="contactsList" class="contacts-list"></div>
+                        </div>
+
+                        <div
+                            class="broadcast-section"
+                            id="broadcastSection"
+                            style="display: none"
+                        >
+                            <button id="broadcastBtn" class="broadcast-btn">
+                                <i class="fas fa-bullhorn"></i>
+                                Broadcast Message
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Chat Area -->
+                    <div class="chat-area">
+                        <div class="chat-header">
+                            <div class="chat-info">
+                                <span id="chatTitle"
+                                    >Select a conversation</span
+                                >
+                                <span id="chatStatus"></span>
+                            </div>
+                            <div class="chat-actions">
+                                <button
+                                    id="downloadChatBtn"
+                                    class="action-btn"
+                                    title="Download Chat"
+                                >
+                                    <i class="fas fa-download"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div id="messagesContainer" class="messages-container">
+                            <div class="no-chat-selected">
+                                <i class="fas fa-comments"></i>
+                                <p>Select a conversation to start messaging</p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="message-input-container"
+                            style="display: none"
+                        >
+                            <div
+                                class="attachment-preview"
+                                id="attachmentPreview"
+                            ></div>
+                            <div class="message-input">
+                                <button id="attachBtn" class="attach-btn">
+                                    <i class="fas fa-paperclip"></i>
+                                </button>
+                                <input
+                                    type="file"
+                                    id="fileInput"
+                                    multiple
+                                    accept="image/*,video/*,audio/*,.pdf,.doc,.docx,.txt"
+                                    style="display: none"
+                                />
+                                <input
+                                    type="text"
+                                    id="messageInput"
+                                    placeholder="Type a message..."
+                                />
+                                <button id="sendBtn" class="send-btn">
+                                    <i class="ph ph-paper-plane-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modals -->
+            <div id="newChatModal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3>New Conversation</h3>
+                        <button class="close-btn">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="availableUsers" class="users-list"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="broadcastModal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3>Broadcast Message</h3>
+                        <button class="close-btn">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <textarea
+                            id="broadcastMessage"
+                            placeholder="Type your broadcast message..."
+                        ></textarea>
+                        <button
+                            id="sendBroadcastBtn"
+                            class="broadcast-send-btn"
+                        >
+                            Send to All
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Login Form Modal -->
+            <div id="loginFormModal" class="modal">
+                <div class="modal-content login-form-modal">
+                    <div class="modal-header">
+                        <h3 id="loginFormTitle">Sign In</h3>
+                        <button class="close-btn">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <form
+                            class="form"
+                            autocomplete="off"
+                            id="actualLoginForm"
+                        >
+                            <div class="control">
+                                <h1>Sign In</h1>
+                            </div>
+                            <div class="control block-cube block-input">
+                                <input
+                                    name="username"
+                                    type="text"
+                                    placeholder="Username"
+                                    id="loginUsername"
+                                />
+                                <div class="bg-top">
+                                    <div class="bg-inner"></div>
+                                </div>
+                                <div class="bg-right">
+                                    <div class="bg-inner"></div>
+                                </div>
+                                <div class="bg">
+                                    <div class="bg-inner"></div>
+                                </div>
+                            </div>
+                            <div class="control block-cube block-input">
+                                <input
+                                    name="password"
+                                    type="password"
+                                    placeholder="Password"
+                                    id="loginPassword"
+                                />
+                                <div class="bg-top">
+                                    <div class="bg-inner"></div>
+                                </div>
+                                <div class="bg-right">
+                                    <div class="bg-inner"></div>
+                                </div>
+                                <div class="bg">
+                                    <div class="bg-inner"></div>
+                                </div>
+                            </div>
+                            <button
+                                class="btn block-cube block-cube-hover"
+                                type="button"
+                                id="submitLoginForm"
+                            >
+                                <div class="bg-top">
+                                    <div class="bg-inner"></div>
+                                </div>
+                                <div class="bg-right">
+                                    <div class="bg-inner"></div>
+                                </div>
+                                <div class="bg">
+                                    <div class="bg-inner"></div>
+                                </div>
+                                <div class="text">Log In</div>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- AI Assistant Chatbox -->
+        <div id="aiChatbox" class="ai-chatbox">
+            <div class="ai-chat-header" id="aiChatHeader">
+                <div class="ai-chat-title">
+                    <i class="ph ph-chats-teardrop"></i>
+                    <span>Nexbot</span>
+                </div>
+                <div class="ai-chat-controls">
+                    <button id="aiMinimizeBtn" class="ai-control-btn">
+                        <i class="fas fa-minus"></i>
+                    </button>
+                    <button id="aiCloseBtn" class="ai-control-btn">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="ai-chat-body" id="aiChatBody">
+                <div class="ai-messages" id="aiMessages">
+                    <div class="ai-message ai-assistant">
+                        <div class="ai-message-content">
+                            <i class="fas fa-robot ai-avatar"></i>
+                            <div class="ai-text">
+                                <p>
+                                    Hello! I'm your AI assistant. How can I help
+                                    you today?
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ai-input-container">
+                    <input
+                        type="text"
+                        id="aiMessageInput"
+                        placeholder="Ask me anything..."
+                    />
+                    <button id="aiSendBtn" class="ai-send-btn">
+                        <i class="ph ph-paper-plane-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- AI Chat Toggle Button -->
+        <div id="aiChatToggle" class="ai-chat-toggle">
+            <i
+                class="ph ph-chats-teardrop"
+                style="color: #374151; font-size: 1.5rem; margin-right: 8px"
+            ></i>
+            <input
+                type="text"
+                id="quickAiInput"
+                placeholder="Ask Nexbot..."
+                style="
+                    flex: 1;
+                    background: transparent;
+                    border: none;
+                    color: #374151;
+                    font-size: 0.9rem;
+                    outline: none;
+                "
+            />
+            <button id="quickAiSend" class="quick-ai-send">
+                <i class="ph ph-paper-plane-right"></i>
+            </button>
+        </div>
+
+        <script type="module" src="./script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,12 @@
+[.WebGL-0x228c02f3c700] GL_INVALID_VALUE: glTexStorage2D: Texture dimensions must all be greater than zero.Understand this warning
+6[.WebGL-0x228c02f3c700] GL_INVALID_FRAMEBUFFER_OPERATION: glClear: Framebuffer is incomplete: Attachment has zero size.Understand this warning
+fa26a488-f39a-49ae-b26b-397e44b213c9-00-2k35gy61idsxf.sisko.replit.dev/:1 [.WebGL-0x228c02f3c700] GL_INVALID_FRAMEBUFFER_OPERATION: glClear: Framebuffer is incomplete: Attachment has zero size.Understand this warning
+fa26a488-f39a-49ae-b26b-397e44b213c9-00-2k35gy61idsxf.sisko.replit.dev/:1 [.WebGL-0x228c02f3c700] GL_INVALID_FRAMEBUFFER_OPERATION: glClear: Framebuffer is incomplete: Attachment has zero size.Understand this warning
+fa26a488-f39a-49ae-b26b-397e44b213c9-00-2k35gy61idsxf.sisko.replit.dev/:1 [.WebGL-0x228c02f3c700] GL_INVALID_FRAMEBUFFER_OPERATION: glClear: Framebuffer is incomplete: Attachment has zero size.Understand this warning
+fa26a488-f39a-49ae-b26b-397e44b213c9-00-2k35gy61idsxf.sisko.replit.dev/:1 [.WebGL-0x228c02f3c700] GL_INVALID_FRAMEBUFFER_OPERATION: glClear: Framebuffer is incomplete: Attachment has zero size.Understand this warning
+fa26a488-f39a-49ae-b26b-397e44b213c9-00-2k35gy61idsxf.sisko.replit.dev/:1 [.WebGL-0x228c02f3c700] GL_INVALID_FRAMEBUFFER_OPERATION: glClear: Framebuffer is incomplete: Attachment has zero size.Understand this warning
+fa26a488-f39a-49ae-b26b-397e44b213c9-00-2k35gy61idsxf.sisko.replit.dev/:1 [.WebGL-0x228c02f3c700] GL_INVALID_FRAMEBUFFER_OPERATION: glClear: Framebuffer is incomplete: Attachment has zero size.Understand this warning
+6[.WebGL-0x228c02f3c700] GL_INVALID_FRAMEBUFFER_OPERATION: glClearBufferfv: Framebuffer is incomplete: Attachment has zero size.Understand this warning
+228[.WebGL-0x228c02f3c700] GL_INVALID_FRAMEBUFFER_OPERATION: glDrawElements: Framebuffer is incomplete: Attachment has zero size.Understand this warning
+15[.WebGL-0x228c02f3c700] GL_INVALID_FRAMEBUFFER_OPERATION: glDrawArrays: Framebuffer is incomplete: Attachment has zero size.Understand this warning
+fa26a488-f39a-49ae-b26b-397e44b213c9-00-2k35gy61idsxf.sisko.replit.dev/:1 WebGL: too many errors, no more errors will be reported to the console for this context.Understand this warning
